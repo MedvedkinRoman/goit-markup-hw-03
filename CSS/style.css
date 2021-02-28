@@ -49,11 +49,14 @@ ul {
 .auth-nav .link:focus {
   color: #2196f3;
 }
+.site-nav .active {
+  color: #2196f3;
+}
 /* ============ end nav ============ */
 
 /* ============ hero ============ */
 .hero {
-  background-color: 2f303a;
+  background-color: #2f303a;
 }
 .hero-title {
   font-weight: 900;
@@ -106,7 +109,7 @@ ul {
 /* ============ end team ============ */
 
 /* ============ opportunities ============ */
-.opportunities {
+.opportunities .opportunities-button {
   font-weight: 500;
   font-size: 16px;
   line-height: 1.625;
@@ -136,6 +139,8 @@ li > p {
 /* ============ footer ============ */
 footer {
   background-color: #2f303a;
+  font-size: 14px;
+  line-height: 1.71;
 }
 .logo-footer {
   font-family: Raleway, sans-serif;
@@ -148,6 +153,8 @@ footer {
 }
 .address {
   text-decoration: none;
+  font-size: 14px;
+  line-height: 1.71;
   color: #ffffff;
 }
 .mail-tel {
