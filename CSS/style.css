@@ -1,17 +1,74 @@
+:root {
+  --main-font: Roboto, sans-serif;
+  --secondary-font: Raleway, sans-serif;
+  --accent-color: #2196f3;
+  --font-color: #212121;
+  --section-pt: 94px;
+  --section-pb: 94px;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin: 0;
+}
+
+ul,
+ol {
+  margin: 0;
+  padding: 0;
+}
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+a {
+  text-decoration: none;
+}
+
+.visually-hidden {
+position: absolute;
+width: 1px;
+height: 1px;
+margin: -1px;
+border: 0;
+padding: 0;
+
+white-space: nowrap;
+clip-path: inset(100%);
+clip: rect(0 0 0 0);
+overflow: hidden;
+}
+
+=================================================
+
+
+
+
+
 body {
   background-color: #e5e5e5;
-  color: #212121;
-  font-family: Roboto, sans-serif;
+  color: var(--font-color);
+  font-family: var(--main-font);
 }
 header {
+  padding-top: 24px;
+  padding-bottom: 25px;
+
   font-weight: 500;
   font-size: 14px;
   line-height: 1.14;
   letter-spacing: 0.02em;
 }
 main {
-  color: #212121;
-  font-family: Roboto, sans-serif;
+  color: var(--font-color)
+  font-family: var(--main-font)
   background-color: #ffffff;
 }
 .link {
@@ -20,10 +77,31 @@ main {
 ul {
   list-style-type: none;
 }
+
+.section{
+  padding-top: 94px;
+  padding-bottom: 94px;
+}
+.container {
+  width: 1200px;
+  margin: 0 auto;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+/* ============ header ============ */
+
+header .container {
+  display: flex;
+  align-items: center;
+  margin: 0 auto;
+}
+/* ============ end header ============ */
+
 /* ============ Logo ============ */
 .logo-header {
-  color: #212121;
-  font-family: Raleway, sans-serif;
+  margin-right: 93px;
+  color: var(--font-color)
+  font-family: var(--secondary-font)
   font-weight: 700;
   font-size: 26px;
   line-height: 1.19;
@@ -31,38 +109,69 @@ ul {
   text-decoration: none;
 }
 .web {
-  color: #2196f3;
+  color: var(--accent-color)
 }
 
 /* ============ nav ============ */
-.site-nav .link {
-  color: #212121;
+.site-nav {
+  display: flex;
 }
+
+.auth-nav {
+  display: flex;
+  margin: auto;
+}
+
+.site-nav .link {
+  color: var(--font-color)
+}
+
 .site-nav .link:hover,
 .site-nav .link:focus {
-  color: #2196f3;
+  color: var(--accent-color)
 }
+
+.navigation-item:not(:last-child) {
+margin-right: 50px;
+}
+
+.contact-item:not(:last-child) {
+margin-right: 50px;
+}
+
 .auth-nav .link {
   color: #757575;
 }
+
 .auth-nav .link:hover,
 .auth-nav .link:focus {
-  color: #2196f3;
+  color: var(--accent-color)
 }
+
 .site-nav .active {
-  color: #2196f3;
+  color: var(--accent-color)
 }
 /* ============ end nav ============ */
 
 /* ============ hero ============ */
-.hero {
+.hero-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: var(--section-pb);
+
+  width: 1600px;
+  height: 600px;
+  margin: auto;
   background-color: #2f303a;
 }
 .hero-title {
+  font-family: var(--main-font);
   font-weight: 900;
   font-size: 44px;
   line-height: 1.36;
-  /* color: #ffffff; */
+  color: #ffffff;
 }
 .hero-button {
   font-weight: 700;
@@ -72,6 +181,17 @@ ul {
 /* ============ end hero ============ */
 
 /* ============ advantage ============ */
+.advantage{
+display: flex;
+/* margin-left: -30px; */
+}
+.advantage .item:nth-child(1) {
+  margin-left: 0px;
+}
+.advantage > .item {
+flex-basis: calc(100% / 4 - 30px);
+margin-left: 30px;
+}
 .advantage-title {
   font-weight: 700;
   font-size: 14px;
@@ -84,7 +204,17 @@ ul {
 /* ============ end advantage ============ */
 
 /* ============ work============ */
+.list-work {
+ display: flex;
+ justify-content: space-between;
+}
+.list-work-item {
+ 
+}
 .work {
+  text-align: center;
+  margin-bottom: 50px;
+
   font-weight: 700;
   font-size: 36px;
   line-height: 1.17;
@@ -92,7 +222,24 @@ ul {
 /* ============ end work ============ */
 
 /* ============ team ============ */
+.team {
+  display: flex;
+  justify-content: space-between;
+}
+.team-flex {
+ text-align: center;
+ margin-bottom: 30px;
+ margin-top: 30px;
+}
+.description {
+  background-color: #F5F4FA;
+}
+.team-item {
+  background-color: #fff;
+}
 .team-title {
+  margin-bottom: 50px;
+  text-align: center;
   font-weight: 700;
   font-size: 36px;
   line-height: 1.17;
@@ -109,26 +256,63 @@ ul {
 /* ============ end team ============ */
 
 /* ============ opportunities ============ */
+.opportunities {
+  display: flex;
+  justify-content: center;
+  padding-top: 32px;
+  padding-bottom: 34px;
+}
+.opportunities-item {
+  margin-left: 8px;
+}
 .opportunities-button {
   font-weight: 500;
   font-size: 16px;
   line-height: 1.625;
+  border: 1px solid #eee;
 }
 .opportunities-button:hover,
 .opportunities-button:focus {
-  background-color: #2196f3;
-  color: #ffffff;
+  background-color: var(--accent-color);
+  color: #fff;
   cursor: pointer;
 }
 /* ============ end opportunities ============ */
 
 /* ============ products ============ */
-li > h3 {
+ .products {
+   display: flex;
+   flex-wrap: wrap;
+
+ }
+ .products-item {
+  width: calc((100% - 60px) / 3);
+  margin-right: 30px;
+  margin-bottom: 30px;
+ }
+
+ .products-item:nth-child(3n) {
+   margin-right: 0px;
+ }
+ .products-item: {
+  margin-bottom: 0;
+  width: 370px;
+ }
+ .cart-content {
+  padding: 20px 24px;
+  box-sizing: border-box;
+  border: 1px solid #eee;
+  border-top: none;
+  width: 370px;
+ }
+
+.products-name {
   font-weight: 700;
   font-size: 18px;
   line-height: 2;
+  color: var(--font-color);
 }
-li > p {
+.products-cat {
   font-weight: 400;
   color: #757575;
   font-size: 16px;
@@ -142,8 +326,17 @@ footer {
   font-size: 14px;
   line-height: 1.71;
 }
+.address {
+  display: flex;
+  flex-direction: column;
+  width: 231px;
+  font-style: normal;
+  padding-top: 60px;
+  padding-bottom: 60px;
+}
 .logo-footer {
-  font-family: Raleway, sans-serif;
+  margin-bottom: 20px;
+  font-family: var(--secondary-font)
   font-weight: 700;
   color: #ffffff;
   font-size: 26px;
@@ -151,11 +344,12 @@ footer {
   letter-spacing: 0.03em;
   text-decoration: none;
 }
-.address {
+.address-text {
   text-decoration: none;
   font-size: 14px;
   line-height: 1.71;
   color: #ffffff;
+  font-style: normal;
 }
 .mail-tel {
   text-decoration: none;
