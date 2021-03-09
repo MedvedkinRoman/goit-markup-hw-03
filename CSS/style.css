@@ -100,8 +100,8 @@ header .container {
 /* ============ Logo ============ */
 .logo-header {
   margin-right: 93px;
-  color: var(--font-color)
-  font-family: var(--secondary-font)
+  color: var(--font-color);
+  font-family: var(--secondary-font);
   font-weight: 700;
   font-size: 26px;
   line-height: 1.19;
@@ -119,7 +119,7 @@ header .container {
 
 .auth-nav {
   display: flex;
-  margin: auto;
+  margin-left: auto;
 }
 
 .site-nav .link {
@@ -155,18 +155,17 @@ margin-right: 50px;
 
 /* ============ hero ============ */
 .hero-container {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
+  padding: 200px 15px;
   margin-bottom: var(--section-pb);
-
+  margin: 0 auto;
   width: 1600px;
-  height: 600px;
-  margin: auto;
   background-color: #2f303a;
 }
 .hero-title {
+  margin: 0 auto;
+  margin-bottom: 30px;
+  max-width: 696px;
+  text-align: center;
   font-family: var(--main-font);
   font-weight: 900;
   font-size: 44px;
@@ -174,6 +173,7 @@ margin-right: 50px;
   color: #ffffff;
 }
 .hero-button {
+  margin: 0 auto;
   font-weight: 700;
   font-size: 16px;
   line-height: 1.875;
@@ -183,7 +183,9 @@ margin-right: 50px;
 /* ============ advantage ============ */
 .advantage{
 display: flex;
-/* margin-left: -30px; */
+}
+.advan {
+padding-bottom: 0;
 }
 .advantage .item:nth-child(1) {
   margin-left: 0px;
@@ -193,6 +195,7 @@ flex-basis: calc(100% / 4 - 30px);
 margin-left: 30px;
 }
 .advantage-title {
+  margin-bottom: 10px;
   font-weight: 700;
   font-size: 14px;
   line-height: 1.17;
@@ -245,6 +248,7 @@ margin-left: 30px;
   line-height: 1.17;
 }
 .team-title-name {
+  margin-bottom: 10px;
   font-weight: 500;
   font-size: 16px;
   line-height: 1.17;
@@ -252,6 +256,7 @@ margin-left: 30px;
 .team-title-profession {
   font-size: 16px;
   line-height: 1.17;
+  color: #757575;
 }
 /* ============ end team ============ */
 
@@ -259,11 +264,13 @@ margin-left: 30px;
 .opportunities {
   display: flex;
   justify-content: center;
-  padding-top: 32px;
-  padding-bottom: 34px;
+  margin-bottom: 34px;
 }
 .opportunities-item {
   margin-left: 8px;
+}
+.opportunities-item:first-child {
+  margin-left: 0;
 }
 .opportunities-button {
   font-weight: 500;
@@ -280,23 +287,21 @@ margin-left: 30px;
 /* ============ end opportunities ============ */
 
 /* ============ products ============ */
+.gallery {
+  padding-top: 32px;
+  padding-bottom: 156px;
+}
  .products {
    display: flex;
    flex-wrap: wrap;
-
+   margin-left: -30px;
+   margin-bottom: -30px;
  }
  .products-item {
-  width: calc((100% - 60px) / 3);
-  margin-right: 30px;
-  margin-bottom: 30px;
- }
-
- .products-item:nth-child(3n) {
-   margin-right: 0px;
- }
- .products-item: {
-  margin-bottom: 0;
-  width: 370px;
+   margin-left: 30px;
+   margin-top: 30px;
+   /* width: 370px;
+   height: 404px; */
  }
  .cart-content {
   padding: 20px 24px;
@@ -329,7 +334,6 @@ footer {
 .address {
   display: flex;
   flex-direction: column;
-  width: 231px;
   font-style: normal;
   padding-top: 60px;
   padding-bottom: 60px;
