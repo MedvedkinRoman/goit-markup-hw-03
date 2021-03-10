@@ -49,31 +49,29 @@ overflow: hidden;
 =================================================
 
 
-
-
-
 body {
   background-color: #e5e5e5;
   color: var(--font-color);
   font-family: var(--main-font);
 }
-header {
-  padding-top: 24px;
-  padding-bottom: 25px;
 
+header {
   font-weight: 500;
   font-size: 14px;
   line-height: 1.14;
   letter-spacing: 0.02em;
 }
+
 main {
-  color: var(--font-color)
-  font-family: var(--main-font)
+  color: var(--font-color);
+  font-family: var(--main-font);
   background-color: #ffffff;
 }
+
 .link {
   text-decoration: none;
 }
+
 ul {
   list-style-type: none;
 }
@@ -82,18 +80,21 @@ ul {
   padding-top: 94px;
   padding-bottom: 94px;
 }
+
 .container {
   width: 1200px;
   margin: 0 auto;
   padding-left: 15px;
   padding-right: 15px;
 }
+
 /* ============ header ============ */
 
 header .container {
   display: flex;
   align-items: center;
   margin: 0 auto;
+  /* outline:  1px solid black; */
 }
 /* ============ end header ============ */
 
@@ -128,7 +129,12 @@ header .container {
 
 .site-nav .link:hover,
 .site-nav .link:focus {
-  color: var(--accent-color)
+ color: var(--accent-color)
+}
+
+.navigation-item {
+  padding-top: 32px;
+  padding-bottom: 32px;
 }
 
 .navigation-item:not(:last-child) {
@@ -171,12 +177,23 @@ margin-right: 50px;
   font-size: 44px;
   line-height: 1.36;
   color: #ffffff;
+  text-transform: uppercase;
 }
 .hero-button {
   margin: 0 auto;
+  width: 200px;
+  height: 50px;
+
   font-weight: 700;
   font-size: 16px;
   line-height: 1.875;
+  display: block;
+  background-color: var(--accent-color);
+  color: #ffffff;
+  /* box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15); */
+  border-radius: 4px;
+  border: 0px var(--accent-color);
+  
 }
 /* ============ end hero ============ */
 
@@ -266,23 +283,27 @@ margin-left: 30px;
   justify-content: center;
   margin-bottom: 34px;
 }
-.opportunities-item {
+ 
+.opportunities-item + .opportunities-item {
   margin-left: 8px;
 }
-.opportunities-item:first-child {
-  margin-left: 0;
-}
+
 .opportunities-button {
   font-weight: 500;
   font-size: 16px;
   line-height: 1.625;
   border: 1px solid #eee;
+  box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08), 0px 2px 2px rgba(0, 0, 0, 0.12);
+  border-radius: 4px;
+  padding: 6px 22px;
 }
+
 .opportunities-button:hover,
 .opportunities-button:focus {
   background-color: var(--accent-color);
   color: #fff;
   cursor: pointer;
+  border-color: var(--accent-color);
 }
 /* ============ end opportunities ============ */
 
@@ -291,6 +312,7 @@ margin-left: 30px;
   padding-top: 32px;
   padding-bottom: 156px;
 }
+
  .products {
    display: flex;
    flex-wrap: wrap;
