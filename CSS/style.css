@@ -60,6 +60,8 @@ header {
   font-size: 14px;
   line-height: 1.14;
   letter-spacing: 0.02em;
+  color: var(--font-color);
+  font-family: var(--main-font);
 }
 
 main {
@@ -94,6 +96,7 @@ header .container {
   display: flex;
   align-items: center;
   margin: 0 auto;
+  padding: 24px 0px;
   /* outline:  1px solid black; */
 }
 /* ============ end header ============ */
@@ -130,11 +133,6 @@ header .container {
 .site-nav .link:hover,
 .site-nav .link:focus {
  color: var(--accent-color)
-}
-
-.navigation-item {
-  padding-top: 32px;
-  padding-bottom: 32px;
 }
 
 .navigation-item:not(:last-child) {
@@ -178,6 +176,7 @@ margin-right: 50px;
   line-height: 1.36;
   color: #ffffff;
   text-transform: uppercase;
+  letter-spacing: 0.06em;
 }
 .hero-button {
   margin: 0 auto;
@@ -248,8 +247,8 @@ margin-left: 30px;
 }
 .team-flex {
  text-align: center;
- margin-bottom: 30px;
- margin-top: 30px;
+ padding-bottom: 30px;
+ padding-top: 30px;
 }
 .description {
   background-color: #F5F4FA;
@@ -281,7 +280,7 @@ margin-left: 30px;
 .opportunities {
   display: flex;
   justify-content: center;
-  margin-bottom: 34px;
+  margin-bottom: 50px;
 }
  
 .opportunities-item + .opportunities-item {
@@ -317,7 +316,7 @@ margin-left: 30px;
    display: flex;
    flex-wrap: wrap;
    margin-left: -30px;
-   margin-bottom: -30px;
+  margin-top: -30px;
  }
  .products-item {
    margin-left: 30px;
@@ -353,6 +352,7 @@ footer {
   font-size: 14px;
   line-height: 1.71;
 }
+
 .address {
   display: flex;
   flex-direction: column;
@@ -360,6 +360,7 @@ footer {
   padding-top: 60px;
   padding-bottom: 60px;
 }
+
 .logo-footer {
   margin-bottom: 20px;
   font-family: var(--secondary-font)
@@ -370,6 +371,11 @@ footer {
   letter-spacing: 0.03em;
   text-decoration: none;
 }
+
+.address-item + .address-item {
+  margin-top: 9px;
+}
+
 .address-text {
   text-decoration: none;
   font-size: 14px;
@@ -377,6 +383,7 @@ footer {
   color: #ffffff;
   font-style: normal;
 }
+
 .mail-tel {
   text-decoration: none;
   color: rgba(255, 255, 255, 0.6);
