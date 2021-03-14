@@ -421,6 +421,7 @@ header .container {
 .clients-list-wrapper:hover,
 .clients-list-wrapper:focus {
   border: 1px solid var(--accent-color);
+  cursor: pointer;
 }
 
 .clients-list-wrapper:hover .clients-icon,
