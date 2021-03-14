@@ -3,6 +3,8 @@
   --secondary-font: Raleway, sans-serif;
   --accent-color: #2196f3;
   --font-color: #212121;
+  --nav-color: #757575;
+  --icon-color: #afb1b8;
   --section-pt: 94px;
   --section-pb: 94px;
 }
@@ -141,13 +143,43 @@ header .container {
   margin-right: 50px;
 }
 
+.mail-list-icon {
+  width: 16px;
+  height: 12px;
+}
+
+.smartphone-list-icon {
+  width: 10px;
+  height: 16px;
+}
+
+.contact-item .link {
+  display: flex;
+  align-items: center;
+}
+
 .auth-nav .link {
-  color: #757575;
+  color: var(--nav-color);
+}
+
+.mail-list-icon {
+  fill: var(--nav-color);
+  margin-right: 10px;
+}
+
+.smartphone-list-icon {
+  fill: var(--nav-color);
+  margin-right: 10px;
 }
 
 .auth-nav .link:hover,
 .auth-nav .link:focus {
   color: var(--accent-color);
+}
+
+.contact-item > .link:hover svg,
+.contact-item > .link:focus svg {
+  fill: var(--accent-color);
 }
 
 .site-nav .active {
@@ -162,6 +194,13 @@ header .container {
   margin: 0 auto;
   max-width: 1600px;
   background-color: #2f303a;
+  background-image: linear-gradient(
+      rgba(47, 48, 58, 0.4),
+      rgba(47, 48, 58, 0.4)
+    ),
+    url('../Images/Hero/img.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 .hero-title {
   margin: 0 auto;
@@ -217,6 +256,36 @@ header .container {
   font-size: 14px;
   line-height: 1.71;
 }
+
+.advantage-icon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 270px;
+  height: 120px;
+  background-color: #f5f4fa;
+  margin-bottom: 30px;
+}
+
+.advantage-icon-antenna {
+  width: 64px;
+  height: 70px;
+}
+
+.advantage-icon-clock {
+  width: 66px;
+  height: 70px;
+}
+
+.advantage-icon-diagram {
+  width: 70px;
+  height: 54px;
+}
+
+.advantage-icon-astronaut {
+  width: 54px;
+  height: 60px;
+}
 /* ============ end advantage ============ */
 
 /* ============ work============ */
@@ -241,17 +310,24 @@ header .container {
   display: flex;
   justify-content: space-between;
 }
+
 .team-flex {
   text-align: center;
   padding-bottom: 30px;
   padding-top: 30px;
 }
+
 .description {
   background-color: #f5f4fa;
 }
+
 .team-item {
   background-color: #fff;
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+    0px 2px 1px rgba(0, 0, 0, 0.2);
+  border-radius: 0px 0px 4px 4px;
 }
+
 .team-title {
   margin-bottom: 50px;
   text-align: center;
@@ -259,18 +335,103 @@ header .container {
   font-size: 36px;
   line-height: 1.17;
 }
+
 .team-title-name {
   margin-bottom: 10px;
   font-weight: 500;
   font-size: 16px;
   line-height: 1.17;
 }
+
 .team-title-profession {
   font-size: 16px;
   line-height: 1.17;
   color: #757575;
+  margin-bottom: 16px;
+}
+
+.social-list {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-left: 32px;
+  padding-right: 32px;
+}
+
+.social-list-link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background-color: #fff;
+}
+
+.social-list-link:hover,
+.social-list-link:focus {
+  background-color: var(--accent-color);
+}
+
+.social-list-link:hover .social-list-icon,
+.social-list-link:focus .social-list-icon {
+  fill: #fff;
+}
+
+.social-list-icon {
+  width: 20px;
+  height: 20px;
+  fill: var(--icon-color);
 }
 /* ============ end team ============ */
+
+/* ============ clients ============ */
+.clients {
+  font-family: var(--main-font);
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 1.17;
+  color: var(--font-color);
+  text-align: center;
+  letter-spacing: 0.03em;
+}
+
+.clients-list {
+  display: flex;
+  justify-content: center;
+  margin-top: 50px;
+  margin-left: -30px;
+}
+
+.clients-list-item {
+  margin-left: 30px;
+}
+
+.clients-list-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid var(--icon-color);
+  border-radius: 4px;
+  fill: var(--icon-color);
+  width: 170px;
+  height: 90px;
+}
+
+.clients-list-wrapper:hover,
+.clients-list-wrapper:focus {
+  border: 1px solid var(--accent-color);
+}
+
+.clients-list-wrapper:hover .clients-icon,
+.clients-list-wrapper:focus .clients-icon {
+  fill: var(--accent-color);
+}
+
+.clients-icon {
+  fill: var(--icon-color);
+}
+/* ============ end clients ============ */
 
 /* ============ opportunities ============ */
 .opportunities {
@@ -283,13 +444,17 @@ header .container {
   margin-left: 8px;
 }
 
+.opportunities-item:hover,
+.opportunities-item:focus {
+  box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08),
+    0px 2px 2px rgba(0, 0, 0, 0.12);
+}
+
 .opportunities-button {
   font-weight: 500;
   font-size: 16px;
   line-height: 1.625;
   border: 1px solid #eee;
-  box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08),
-    0px 2px 2px rgba(0, 0, 0, 0.12);
   border-radius: 4px;
   padding: 6px 22px;
 }
@@ -305,7 +470,7 @@ header .container {
 
 /* ============ products ============ */
 .gallery {
-  padding-top: 32px;
+  padding-top: 94px;
   padding-bottom: 156px;
 }
 
@@ -315,11 +480,19 @@ header .container {
   margin-left: -30px;
   margin-top: -30px;
 }
+
 .products-item {
   flex-basis: calc(100% / 3 - 30px);
   margin-top: 30px;
   margin-left: 30px;
 }
+
+.products-item:hover,
+.products-item:focus {
+  box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
+    1px 4px 6px rgba(0, 0, 0, 0.16);
+}
+
 .cart-content {
   padding: 20px 24px;
   box-sizing: border-box;
@@ -333,6 +506,7 @@ header .container {
   line-height: 2;
   color: var(--font-color);
 }
+
 .products-cat {
   font-weight: 400;
   color: #757575;
@@ -390,4 +564,45 @@ footer {
   font-weight: 400;
 }
 
+.footer-social-links-title {
+  display: inline-block;
+  align-items: center;
+  margin-bottom: 20px;
+
+  font-family: var(--main-font);
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 1.14;
+  color: #fff;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+}
+
+.footer-social-links {
+  display: block;
+  box-sizing: border-box;
+  width: 206px;
+}
+
+.footer-social-links {
+  margin-left: 70px;
+}
+
+footer .container {
+  display: flex;
+  align-items: baseline;
+}
+
+footer .social-list {
+  justify-content: space-between;
+  padding: 0;
+}
+
+footer .social-list-link {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+footer .social-list-icon {
+  fill: #fff;
+}
 /* ============ end footer ============ */
