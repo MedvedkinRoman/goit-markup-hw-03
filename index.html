@@ -11,6 +11,7 @@
         crossorigin="anonymous" />
     <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@700&family=Roboto:wght@400;500;700;900&display=swap"
         rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
     <link rel="stylesheet" href="./CSS/style.css">
 </head>
 <body>
@@ -19,9 +20,12 @@
             <a class="logo-header" href="./index.html"><span class="web">Web</span>Studio</a>
             <nav>
                 <ul class="site-nav list">
-                    <li class="navigation-item" ><a href="./index.html" class="active link">Студия</a></li>
-                    <li class="navigation-item" ><a href="./portfolio.html" class="link">Портфолио</a></li>
-                    <li class="navigation-item" ><a href="" class="link">Контакты</a></li>
+                    <li class="navigation-item" >
+                        <a class="current active link" href="./index.html">Студия</a></li>
+                    <li class="navigation-item" >
+                        <a class="link" href="./portfolio.html">Портфолио</a></li>
+                    <li class="navigation-item" >
+                        <a class="link" href="">Контакты</a></li>
                 </ul>
             </nav>
             <ul class="auth-nav list">
@@ -47,7 +51,7 @@
         <section class="hero">
             <div class="hero-container">
                 <h1 class="hero-title">эффективные решения для вашего бизнеса</h1>
-                <button type="button" class="hero-button">Заказать услугу</button>
+                <button class="hero-button" type="button" data-modal-open>Заказать услугу</button>
             </div>
         </section>
 
@@ -102,9 +106,24 @@
             <div class="container">
                 <h2 class="work">Чем мы занимаемся</h2>
                 <ul class="list-work">
-                    <li class="list-work-item"><img src="Images/About/img1.jpg" alt="Разработка софта для ПК" width="370" height="294"></li>
-                    <li class="list-work-item"><img src="Images/About/img2.jpg" alt="Разработка софта для мобильных устройств" width="370" height="294"></li>
-                    <li class="list-work-item"><img src="Images/About/img3.jpg" alt="Разработка софта для планшета" width="370" height="294"></li>
+                    <div class="list-work-wrapper">
+                        <li class="list-work-item">
+                            <img src="Images/About/img1.jpg" alt="Десктопные приложения" width="370" height="294">
+                            <p class="list-work-text">Десктопные приложения</p>
+                        </li>
+                    </div>
+                    <div class="list-work-wrapper">
+                        <li class="list-work-item">
+                            <img src="Images/About/img2.jpg" alt="Мобильные приложения" width="370" height="294">
+                            <p class="list-work-text">Мобильные приложения</p>
+                        </li>
+                    </div>
+                    <div class="list-work-wrapper">
+                        <li class="list-work-item">
+                            <img src="Images/About/img3.jpg" alt="Дизайнерские решения" width="370" height="294">
+                            <p class="list-work-text">Дизайнерские решения</p>
+                        </li>
+                    </div>
                 </ul>
             </div>
         </section>
@@ -374,5 +393,17 @@
             </div>
         </div>
     </footer>
+
+    <div class="backdrop is-hidden" data-modal>
+        <div class="modal">
+            <button type="button" class="modal-close-btn" data-modal-close>
+                <svg class="icon-close">
+                    <use href="./Images/icons.svg#icon-close-black-18dp-2-1"></use>
+                </svg>
+            </button>
+        </div>
+    </div>
+
+    <script src="./js/modal.js"></script>
 </body>
 </html>
