@@ -166,11 +166,15 @@ header .container {
 .mail-list-icon {
   width: 16px;
   height: 12px;
+  fill: currentColor;
+  margin-right: 10px;
 }
 
 .smartphone-list-icon {
   width: 10px;
   height: 16px;
+  fill: currentColor;
+  margin-right: 10px;
 }
 
 .contact-item .link {
@@ -183,24 +187,9 @@ header .container {
   transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.mail-list-icon {
-  fill: var(--nav-color);
-  margin-right: 10px;
-}
-
-.smartphone-list-icon {
-  fill: var(--nav-color);
-  margin-right: 10px;
-}
-
 .auth-nav .link:hover,
 .auth-nav .link:focus {
   color: var(--accent-color);
-}
-
-.contact-item > .link:hover svg,
-.contact-item > .link:focus svg {
-  fill: var(--accent-color);
 }
 
 .site-nav .active {
@@ -463,7 +452,7 @@ header .container {
   align-items: center;
   border: 1px solid var(--icon-color);
   border-radius: 4px;
-  fill: var(--icon-color);
+  fill: ;
   width: 170px;
   height: 90px;
 
@@ -478,7 +467,8 @@ header .container {
 
 .clients-list-wrapper:hover .clients-icon,
 .clients-list-wrapper:focus .clients-icon {
-  fill: var(--accent-color);
+  /* fill: var(--accent-color); */
+  fill: currentColor;
 }
 
 .clients-icon {
@@ -507,7 +497,8 @@ header .container {
   padding: 6px 22px;
 
   transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
-    color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    border 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .opportunities-button:hover,
@@ -515,7 +506,7 @@ header .container {
   background-color: var(--accent-color);
   color: #fff;
   cursor: pointer;
-  border: var(--accent-color);
+  border: 1px solid var(--accent-color);
   box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08),
     0px 2px 2px rgba(0, 0, 0, 0.12);
 }
@@ -538,6 +529,7 @@ header .container {
   flex-basis: calc(100% / 3 - 30px);
   margin-top: 30px;
   margin-left: 30px;
+  transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .products-item:hover,
